@@ -37,14 +37,16 @@ function Task({ todo, onChange, onDelete}){
     if(isUpdating){
        todoContent = (
             <>
-            <input value={todo.title}
+            <input class='p-0.21  outline-2 hover:bg-indigo-50'
+            value={todo.title}
             onChange={e => {
                 onChange({
                     ...todo,
                     title:e.target.value
                 });
             }} />
-            <button onClick={() => {
+            <button class='bg-blue-100 p-0.2 rounded hover:bg-blue-300'
+            onClick={() => {
                 setIsUpdating(false);
                 handy();
             }}>SAVE</button>
@@ -54,7 +56,8 @@ function Task({ todo, onChange, onDelete}){
         todoContent = (
             <>
             {todo.title}
-            <button onClick={() => 
+            <button class='ml-2 mr-0.15 bg-blue-50 p-0.2 rounded hover:bg-blue-300'
+            onClick={() => 
                 setIsUpdating(true)             
             }>EDIT</button>
             </>
@@ -70,7 +73,7 @@ function Task({ todo, onChange, onDelete}){
                 });
             }} />
             {todoContent}
-            <button
+            <button class='ml-2 mr-0.15 bg-blue-50 p-1 rounded hover:bg-red-400'
             onClick={() => {
               onDelete(todo.id);
                 lash();}

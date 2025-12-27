@@ -7,7 +7,8 @@ export default function AddTodo({onAddTodo}){
         <>
        <input placeholder='Add Todo'
        value={title} onChange={e => setTitle(e.target.value)} />
-       <button onClick={() => {
+       <button class='ml-2 mr-0.8 mb-3 bg-blue-50 p-1 rounded hover:bg-blue-300'
+       onClick={() => {
         setTitle('');
          onAddTodo(title)
        }}>Add</button>

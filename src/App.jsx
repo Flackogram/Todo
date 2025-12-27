@@ -43,7 +43,7 @@ export default function TaskApp(){
     }
 
     return (
-        <div>
+        <div class='bg-neutral-50 ml-18 mr-2 p-8 align-center place-items-center justify-center mx-auto hover:bg-neutral-200'>
         <AddTodo onAddTodo={handleAddTodo}  />
         <TaskList todos={todos} onChangeTodo={handleChangeTodo}
         onDeleteTodo={handleDeleteTodo}/>
